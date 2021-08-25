@@ -1,0 +1,326 @@
+* {
+  box-sizing: border-box;
+}
+#app-login-btn {
+  width: 160px;
+}
+.container, .container-fluid {
+    padding-left: 0px;
+    margin-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    
+}
+ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+.kanBan {
+    display: flex;
+    width: 100%;
+    max-height: 100%;
+    background-color: #0079BF;
+    justify-content: space-around;
+    color:  #000000;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    
+   
+}
+
+.kanBan-backlog, .kanBan-ready, .kanBan-inProgress, .kanBan-finished {
+
+    display: flex;
+    margin-top: 15px;
+    width: 23%;
+    height: fit-content;
+    border-radius: 10px;
+    border: none;
+    background: rgb(224, 224, 224);
+    font-size: 20px;
+    padding-top: 17px;
+    padding-bottom: 0px;
+    flex-direction: column;
+    position: relative;
+}
+.dropMemo {
+   display: flex;
+   width: 95%;
+    height: fit-content;
+    border-radius: 10px;
+    border: none;
+    background: rgb(224, 224, 224);
+    font-size: 20px;
+    padding-top: 17px;
+    padding-bottom: 0px;
+    flex-direction: column; 
+}
+ h3 {
+     margin-left: 20px;
+     margin-top: 0px;
+     margin-bottom: 15px;
+     
+ }
+ .btn-addCard {
+     display: flex;
+     background-color:  rgb(224, 224, 224);
+     width: 25%;
+     height: 30px;
+     border: none;
+     margin-left: 20px;
+     border-radius: 10px;
+     margin-bottom: 15px;
+     align-items: center;
+     justify-content: center;
+     align-self: flex-start;
+     font-size: small;
+     order: 1;
+    
+ }
+ .btn-addCard:hover:enabled, .dropDownUlReady:hover:enabled {
+  background-color: rgb(250, 249, 244);   
+  cursor: pointer;
+ }
+ 
+ .draggable, .draggable1 {
+    display: flex;
+    margin-left: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 15px;
+    padding-left: 10px;
+    background: rgb(250, 249, 244);
+    word-wrap: break-word;  
+    justify-content: space-between;
+   
+     }
+ 
+ .draggable:hover {
+   background-color: rgb(250, 249, 244);
+   cursor: text;
+ }
+
+.li {
+    border: 1px solid black;
+}
+
+
+.kanBan-ready ul,
+.kanBan-inProgress ul,
+.kanBan-finished ul {
+  margin-top: 10px;
+  margin-left: 25px;
+  position: absolute;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: fit-content;
+  background: rgb(250, 249, 244);
+  left: 0px;
+  list-style: none;
+  border-radius: 5px;
+  opacity: 1;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+.kanBan-ready li,
+.kanBan-inProgress li,
+.kanBan-finished li
+ {
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kanBan-ready li:hover,
+.kanBan-inProgress li:hover,
+.kanBan-finished li:hover
+ {
+  background-color: #0079BF;
+  color: rgb(250, 249, 244);  
+  cursor: pointer;
+ }
+.kanBan-ready button:focus + ul,
+.kanBan-inProgress button:focus + ul,
+.kanBan-finished button:focus + ul {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+  @media screen and (max-width:1270px) {
+    .kanBan {
+      
+      width: 1280px;
+    }
+  }
+ .labelgreeting {
+   color: rgb(250, 249, 244);
+   margin-right: 10px;
+ }
+.svg {
+ display: flex;
+ margin-right: 5px;
+ margin-top: 7px;
+
+ 
+}
+.svg:hover {
+  cursor: pointer;
+  color: red;
+}
+.dropdown {
+  position: relative;
+}
+.checkbox, .taskUser {
+  color: rgb(250, 249, 244);
+}
+.divUserTasks {
+  width: 50%;
+}
+.userAvatar {
+  background-color: rgb(250, 249, 244);
+  border-radius: 20px;
+}
+.divUlUserMenu {
+  display: none;
+  z-index: 10;
+  position:absolute;
+  width: 7vh;
+  margin-top: 3.3%;
+  margin-left: 7%;
+  
+}
+
+.divUlUserMenu ul{
+  color: #000000;
+  width: 100%;
+  position:absolute;
+  background-color: rgb(250, 249, 244);
+  border-radius: 7px;
+  list-style: none;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+}
+
+.divUlUserMenu li {
+  margin: 5px;
+  border-radius: 5px;
+}
+
+
+.divliUserMenu:hover {
+  background-color: rgb(250, 249, 244);
+  cursor: pointer;
+}
+.ulUserFrom {
+  width: 80%;
+}
+.userForm {
+  display: flex;
+  justify-content: flex-end;
+  
+}
+.taskUser {
+  margin: 5px;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #0067A3;
+  height: 80px;
+  align-items: center;
+  font-size: x-large;
+  color: rgb(250, 249, 244);
+}
+.leftSideFooter, .rigthSideFooter, .tasks {
+  display: flex;
+  margin: 10px;
+}
+.tasksusers-form, .users-form, .registration-form {
+  border: rgb(250, 249, 244) 1px solid;
+  border-radius: 5px;
+  margin: 7px;
+  padding: 7px;
+}
+.checkbox {
+  
+  margin: 5px;
+}
+.tasksusers-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.divUlAdminMenu ul{
+  color: #000000;
+  width: 20vh;
+  position:absolute;
+  background-color: #EBECF0;
+  border-radius: 7px;
+  list-style: none;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+}
+.divliAdminMenu:hover {
+  background-color: rgb(250, 249, 244);
+  cursor: pointer;
+}
+.divUlAdminMenu li {
+  margin: 5px;
+  border-radius: 5px;
+}
+.divUlAdminMenu {
+  display: none;
+  z-index: 10;
+  position:absolute;
+  width: 2%;
+  margin-top: 3.2%;
+  margin-left: 7.5%;
+  
+}
+.adminAvatar {
+  height: 20px;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+.tasksusers-form {
+  width: fit-content;
+}
+.registration-form, .users-form, .tasksusers-form {
+  width: 23%;
+  height: 18%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.test{
+  position:absolute;
+  margin-top:-20px;
+  background-color: rgb(34, 33, 33);
+  width:fit-content;
+  height:15px;
+  z-index: 11;
+  border-radius:10px;
+  color: aliceblue;
+  padding-bottom: 5px;
+  
+}
+.form-control, .btn {
+  margin-top: 8px;
+}
+.logoutAdmin {
+   margin-left: 5%;
+}
