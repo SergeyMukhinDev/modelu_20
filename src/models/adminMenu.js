@@ -1,7 +1,6 @@
 import { appState } from "../app";
 import { recoverTasks, arrayOfSpan, changeKan, saveMain } from "./js";
 import { User } from "./User";
-console.log(changeKan);
 
 const displayTaskUser = document.querySelector('#displayTaskUser');
 const inputCheckbox = document.querySelector('#inputCheckbox');

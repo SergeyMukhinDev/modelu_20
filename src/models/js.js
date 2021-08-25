@@ -10,7 +10,6 @@ const backlogBtn = document.querySelector('#btn-backlog');
 const readyBtn = document.getElementById('btn-ready');
 const inProgressBtn = document.querySelector('#btn-inProgress');
 const finishedBtn = document.querySelector('#btn-finished');
-const saveLocalStorage = document.getElementById('btn-save');
 const svgIco = document.querySelectorAll('.svg');
 const sectionFinished = document.querySelector('#app-kanBan-finished');
 const activeTasks = document.getElementById('activTasks');
@@ -28,9 +27,7 @@ let svgAlarm = '<svg class="svg" xmlns="http://www.w3.org/2000/svg" width="16" h
 
 counterTask();
 checkDisableBtn();
-saveLocalStorage.addEventListener('click', () => {
-  saveMain (appState.currentUser.login);
-})
+
 divBacklog.addEventListener('click', (e) => {
   removeTask (e);
   counterTask();
@@ -42,9 +39,7 @@ export function removeTask (e) {
       let parentRemovedElement = document.getElementById(e.target.parentNode.id);
       parentRemovedElement.parentNode.removeChild(parentRemovedElement);
       checkDisableBtn();
-      } else {
-      console.log('Not removed');
-    }
+      } 
   }
 }
 
@@ -275,21 +270,15 @@ export function saveMain (login) {
 divInProgress.addEventListener('click', (e) => {
   editInput (e, inProgressBtn);
   removeTask (e);
- // counterTask();
-  
-    })
+    });
 divFinished.addEventListener('click', (e) => {
   editInput (e, finishedBtn);
   removeTask (e);
-  //counterTask();
-  
-      })
+      });
 divReady.addEventListener('click', (e) => {
   editInput (e, readyBtn);
   removeTask (e);
-  //counterTask();
-
-      })
+      });
 
 export function editInput (e, button) {
   if (e.target.className === 'draggable') {
@@ -310,7 +299,7 @@ export function editInput (e, button) {
       button.innerHTML = 'Submit';
       setTimeout(() => {
         input.style.display = 'flex';
-      }, 1000); //input.style.display = 'flex';
+      }, 1000); 
       input.focus();
       e.target.style.display = 'none';
       button.removeAttribute('disabled');
